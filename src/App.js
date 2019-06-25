@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import './components/CodePenCard.js';
@@ -16,25 +16,29 @@ const data = {
 
 
 
-function App() {
-  const summaryComponents = summaryData.map(project=> {
+class App extends Component{
+  render(){
+    const summaryComponents = summaryData.map(project=> {
+      return (
+        <TextSummary title={project.title} summary={project.summary}/>
+      )
+    })
     return (
-      <TextSummary title={project.title} summary={project.summary}/>
-    )
-  })
-  return (
-    <div className="App">
-      <header>
-       
-      </header>
-      <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-    <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>
-    {summaryComponents}
+      <div className="App">
+        <header>
+         
+        </header>
+        <Button variant="contained" color="primary">
+        Hello World
+      </Button>
+      <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>
+      {summaryComponents}
+    
+      </div>
+    );
+  }
+ 
   
-    </div>
-  );
 }
 
 export default App;
