@@ -18,8 +18,13 @@ const data = {
 
 
 class App extends Component{
+
+  constructor(){
+    super()
+    this.state = {summaryData:summaryData};
+  }
   render(){
-    const summaryComponents = summaryData.map(project=> {
+    const summaryComponents = this.state.summaryData.map(project=> {
       return (
         <TextSummary key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
       )
