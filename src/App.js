@@ -5,7 +5,8 @@ import './components/CodePenCard.js';
 import summaryData from './summaryData.js'
 import Button from '@material-ui/core/Button';
 import CodePenCard from './components/CodePenCard.js';
-import TextSummary from './components/TextSummary.js'
+import TextSummary from './components/TextSummary.js';
+import Searchbar from './components/SearchBar.js';
 
 const data = {
   height:200,
@@ -20,7 +21,7 @@ class App extends Component{
   render(){
     const summaryComponents = summaryData.map(project=> {
       return (
-        <TextSummary title={project.title} summary={project.summary}/>
+        <TextSummary key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
       )
     })
     return (
@@ -31,7 +32,8 @@ class App extends Component{
         <Button variant="contained" color="primary">
         Hello World
       </Button>
-      <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>
+     {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
+      <Searchbar></Searchbar>
       {summaryComponents}
     
       </div>
