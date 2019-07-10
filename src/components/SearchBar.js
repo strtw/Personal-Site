@@ -3,14 +3,20 @@ import React, {Component} from 'react';
 class SearchBar extends Component {
     constructor(){
         super()
-        this.handleClick = this.handleClick.bind(this);
-       handleClick = event => {}
+        this.state = {
+            inputValue:''
+        };
+
+    }
+
+    handleClick(){
+        console.log("yes");
     }
    
     render(){
         return(
             <div>
-                <input type='text'></input><span id="search-bar-search" onClick={handleClick}>Search icon</span>
+                <input type='text' value={this.state.inputValue}></input><span id="search-bar-search" onClick={evt => this.handleClick(evt)}>Search icon</span>
             </div>
         )
 }

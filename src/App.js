@@ -26,7 +26,7 @@ class App extends Component{
   render(){
     const summaryComponents = this.state.summaryData.map(project=> {
       return (
-        <TextSummary key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
+        <TextSummary display={project.display} key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
       )
     })
     return (

@@ -9,7 +9,7 @@ function TextSummary(props){
             )
         })
         return(
-            <div className="project">
+            <div className="project" style={{display:props.display}}>
                 <h2 className='project_title'>{props.title}</h2>
                 <p className='project_summary'>{props.summary}</p>
                 <div className='project_links'>
