@@ -2,10 +2,9 @@ import React, {Component} from 'react'
 
 function TextSummary(props){
   
-        console.log(props)
-        const tags = props.tags.map(tag=> {
+        const tags = props.tags.map((tag,index) => {
             return(
-                <span>{tag}</span>
+                <span key={index}>{tag}</span>
             )
         })
         return(

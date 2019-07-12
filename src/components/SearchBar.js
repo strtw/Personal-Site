@@ -4,19 +4,27 @@ class SearchBar extends Component {
     constructor(){
         super()
         this.state = {
-            inputValue:''
+            inputValue:'',
         };
 
     }
+    handleClick(e){
+       //console.log(this.state.inputValue);
+       this.sendQuery();
+    }
 
-    handleClick(){
-        console.log("yes");
+    handleKeyPress(e){
+            this.setState({inputValue:e.currentTarget.value});
+    }
+
+    sendQuery = () =>{
+        this.props.getSearchQuery(this.state.inputValue);
     }
    
     render(){
         return(
             <div>
-                <input type='text' value={this.state.inputValue}></input><span id="search-bar-search" onClick={evt => this.handleClick(evt)}>Search icon</span>
+                <input type='text' value={this.state.inputValue} onChange={evt => this.handleKeyPress(evt)}></input><span id="search-bar-search" onClick={evt => this.handleClick(evt)}>Search icon</span>
             </div>
         )
 }
