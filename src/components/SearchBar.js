@@ -9,13 +9,14 @@ class SearchBar extends Component {
 
     }
     handleClick(e){
-       //console.log(this.state.inputValue);
        this.sendQuery();
     }
 
     handleKeyPress(e){
             this.setState({inputValue:e.currentTarget.value});
     }
+
+    
 
     sendQuery = () =>{
         this.props.getSearchQuery(this.state.inputValue);

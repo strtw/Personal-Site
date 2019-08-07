@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import CodePenCard from './components/CodePenCard.js';
 import TextSummary from './components/TextSummary.js';
 import Searchbar from './components/SearchBar.js';
-import { tsIndexSignature } from '@babel/types';
+import { tsIndexSignature, exportDefaultSpecifier } from '@babel/types';
 
 
 const data = {
@@ -22,8 +22,9 @@ const data = {
 
 class App extends Component{
 
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    this.updateApp = this.updateApp.bind(this);
     this.state = {
       summaryData:summaryData,
       searchQuery:""
@@ -34,7 +35,7 @@ class App extends Component{
     this.setState({searchQuery:childQueryData})
   }
 
-filterProjects = (index,query) => {
+searchResultsObj = (index,query) => {
   let result = index.search(query);
   return result;
 }
@@ -52,37 +53,62 @@ loadProjectToSearchIndex = (data) =>{
   return index;
 }
 
-/*updateResultDisplay = (filteredArray, allProjects) =>{
+matchSearchToIndex = (results) =>{
   
-  let result = [];
+  let arrayOfIDs = [];
   
-  allProject.forEach(function(project){
-    project.diplay = false; //set all projects to be hidden at beginning of search
-  })
-  
-  
-  filteredArray.forEach(function(project){
-   let id = project.id;
+ results.forEach(function(project){
+   let id = project.ref;
+   arrayOfIDs.push(id);
   })
 
-  result.forEach(function(project){
-    
-  })
-}*/
-
-componentDidUpdate(){
- let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
- let filteredProjects = this.filterProjects(searchIndex, this.state.searchQuery);
-console.log(filteredProjects);
-this.updateResultDisplay(filteredProjects,this.state.summaryData.data);
-
+  return arrayOfIDs;
 }
+
+//componentDidUpdate(){
+  updateApp = ()=>{
+    let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
+    let searchResults = this.searchResultsObj(searchIndex, this.state.searchQuery);
+    let matchedProjectIDS = this.matchSearchToIndex(searchResults,this.state.summaryData.data);
+    /*this.setState({
+
+    })*/
+    /*this.setState({
+      summaryData:{data:[{display: 
+        matchedProjectIDS.forEach((value)=>{
+          this.state.summaryData.data.forEach((project)=>{
+            if(project.id == value){
+              return true;
+            }else{
+              return false; 
+            }
+          })
+         
+        })
+       }]
+      }})*/
+     return matchedProjectIDS;
+    }
+
+
+ 
+ 
+//}
+
+
 
   render(){
     console.log(this.state.summaryData);
+    let projectMatch;
+    let matchedProjectIDS = this.updateApp();
     let summaryComponents = this.state.summaryData.data.map(project=> {
+      matchedProjectIDS.forEach((id)=>{
+        if(id == project.id){
+            projectMatch = true;
+        }
+      })
       return (
-        <TextSummary display={project.display} key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
+        <TextSummary display={projectMatch ? 'block' : 'none'} key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
       )
     })
     return (
@@ -94,7 +120,7 @@ this.updateResultDisplay(filteredProjects,this.state.summaryData.data);
         Hello World
       </Button>
      {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
-      <Searchbar getSearchQuery={this.getSearchQueryP} projects={this.state.summaryData}></Searchbar>
+      <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>
       {summaryComponents}
     
       </div>
