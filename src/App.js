@@ -45,6 +45,7 @@ loadProjectToSearchIndex = (data) =>{
   var index = window.elasticlunr(function () {
     this.addField('title');
     this.addField('summary');
+    this.addField('tags');
     this.setRef('id');
   });
   data.forEach(function(project){
@@ -99,29 +100,43 @@ matchSearchToIndex = (results) =>{
 
   render(){
     console.log(this.state.summaryData);
-    let projectMatch;
+    let projectMatch = true;
     let matchedProjectIDS = this.updateApp();
     let summaryComponents = this.state.summaryData.data.map(project=> {
-      matchedProjectIDS.forEach((id)=>{
+    if(this.state.searchQuery !== ""){
+      for(let id of matchedProjectIDS){
         if(id == project.id){
-            projectMatch = true;
+          projectMatch = true;
+          break;
+         }else{
+        projectMatch  = false;
         }
-      })
+      }
+       
+      
+    }
+      
       return (
-        <TextSummary display={projectMatch ? 'block' : 'none'} key={project.id} title={project.title} summary={project.summary} repository={project.repository} demo={project.demo} tags={project.tags}/>
+        <TextSummary display={projectMatch ? 'block' : 'none'} key={project.id} title={project.title} summary={project.summary} repository={project.repository} presentation={project.presentation} demo={project.demo} tags={project.tags}/>
       )
     })
     return (
       <div className="App">
         <header>
-         
+          <h1 className='main-title'>A growing collection of projects, snippets, and work samples</h1>
+    
         </header>
-        <Button variant="contained" color="primary">
+      {/*  <Button variant="contained" color="primary">
         Hello World
-      </Button>
+      </Button>*/}
      {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
+      
+      
       <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>
-      {summaryComponents}
+      <div className="project_container">
+          {summaryComponents} 
+      </div>
+      
     
       </div>
     );

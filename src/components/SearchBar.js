@@ -14,9 +14,11 @@ class SearchBar extends Component {
 
     handleKeyPress(e){
             this.setState({inputValue:e.currentTarget.value});
+            if(e.keyCode === 13){
+                this.sendQuery();
+              }
     }
 
-    
 
     sendQuery = () =>{
         this.props.getSearchQuery(this.state.inputValue);
@@ -24,8 +26,8 @@ class SearchBar extends Component {
    
     render(){
         return(
-            <div>
-                <input type='text' value={this.state.inputValue} onChange={evt => this.handleKeyPress(evt)}></input><span id="search-bar-search" onClick={evt => this.handleClick(evt)}>Search icon</span>
+            <div className="search">
+                <input className="search-bar" type='text' value={this.state.inputValue} onKeyDown={evt => this.handleKeyPress(evt)} onChange={evt => this.handleKeyPress(evt)} onKey></input><span id="search-bar-search" className='search-button' onClick={evt => this.handleClick(evt)}>Search</span>
             </div>
         )
 }
