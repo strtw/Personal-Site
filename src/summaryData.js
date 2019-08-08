@@ -2,6 +2,30 @@ import { yieldExpression } from "@babel/types";
 
 const summaryData = {data:[
     {
+      id: 0,
+      title: "This site",
+      summary: "Written in React, uses Elasticlunr.js for search",
+      repository:'https://bitbucket.org/strtw/portpholio/src/master/',
+      tags:['React']
+    },
+    {
+      id: 7,
+      title: "Responsive React Dashboard",
+      summary: "An exercise in creating responsive layouts in React with scalable component styling. Utilizes Flexbox & Chart.js",
+      demo:'http://dashboardm.surge.sh/',
+      repository:'https://github.com/strtw/dashboard',
+      tags:['Data Viz','React','Responsive'],
+      embed:'<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTp_DVyPAzO0Y6e9qGpYBlQxZc8hktadwY2_5D9hCH14IOyekXlb9y-gma5fohTv_1X7nBiBM0oJPX1/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+      presentation:'https://docs.google.com/presentation/d/e/2PACX-1vTp_DVyPAzO0Y6e9qGpYBlQxZc8hktadwY2_5D9hCH14IOyekXlb9y-gma5fohTv_1X7nBiBM0oJPX1/pub?start=false&loop=false&delayms=3000'
+    },
+    {
+      id: 11,
+      title: "Stateless React Random Fact Generator - no JSX",
+      summary: "Exercise in using React.createElement",
+      demo:'https://codepen.io/stw/pen/PKrWQg',
+      tags:['React','JSX','Functional Component']
+    },
+    {
       id: 1,
       title: "Elle Front-end Component Library",
       summary: "Written in vanilla JS, HTML, and SCSS this library utilizes Hugo Giraudel's 7-1 Sass architecture. I contributed the buttons, cards, scrollspy, and long search editor.",
@@ -10,19 +34,19 @@ const summaryData = {data:[
       tags:['JavaScript','CSS','SCSS','HTML','UI']
     },
     {
-      id: 2,
-      title: "Mock-up Conversion",
-      summary: "Demonstrates ability to take static design files and convert to code",
-      demo:'http://btmbtm.github.io/MD-Encyclopedia-Profiles/',
-      tags:['UI','HTML','CSS','Mock-up']
-    },
-    {
       id: 3,
       title: "Drag & Drop Puzzle",
       summary: "HTML5 jigsaw puzzle that utilizes the HTML Drag and Drop API. Puzzle includes timer, multiple difficulty levels, and completion animation",
       demo:'http://stuwoodpuzzle.surge.sh/',
       repository:'https://github.com/strtw/puzzle',
       tags:['UI','HTML','CSS','Mock-up','Game','Drag and Drop']
+    },
+    {
+      id: 8,
+      title: "JavaScript Notes",
+      summary: "A collection of notes I compiled while learning JS. Includes topics like closures, callbacks, IIFEs, scope etc.",
+      repository:'https://github.com/strtw/JavaScript-Study-Guides',
+      tags:['JavaScript','OOP','Closures', 'callbacks','events']
     },
     {
       id: 4,
@@ -48,28 +72,11 @@ const summaryData = {data:[
       tags:['API','AJAX','Templating','JavaScript','indexedDB']
     },
     {
-      id: 7,
-      title: "Responsive React Dashboard",
-      summary: "An exercise in creating responsive layouts in React with scalable component styling. Utilizes Flexbox & Chart.js",
-      demo:'http://dashboardm.surge.sh/',
-      repository:'https://github.com/strtw/dashboard',
-      tags:['Data Viz','React','Responsive'],
-      embed:'<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTp_DVyPAzO0Y6e9qGpYBlQxZc8hktadwY2_5D9hCH14IOyekXlb9y-gma5fohTv_1X7nBiBM0oJPX1/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
-      presentation:'https://docs.google.com/presentation/d/e/2PACX-1vTp_DVyPAzO0Y6e9qGpYBlQxZc8hktadwY2_5D9hCH14IOyekXlb9y-gma5fohTv_1X7nBiBM0oJPX1/pub?start=false&loop=false&delayms=3000'
-    },
-    {
-      id: 8,
-      title: "JavaScript Notes",
-      summary: "A collection of notes I compiled while learning JS. Includes topics like closures, callbacks, IIFEs, scope etc.",
-      repository:'https://github.com/strtw/JavaScript-Study-Guides',
-      tags:['JavaScript','OOP','Closures', 'callbacks','events']
-    },
-    {
-      id: 9,
-      title: "This site",
-      summary: "Written in React, uses Elasticlunr.js for search",
-      repository:'https://bitbucket.org/strtw/portpholio/src/master/',
-      tags:['React']
+      id: 13,
+      title: "CSS Accordion",
+      summary: "Exercise in creating an accordion that only uses HTML / CSS",
+      demo:'https://codepen.io/stw/pen/GNoVqV',
+      tags:['CSS','UI']
     },
     {
       id: 10,
@@ -79,11 +86,11 @@ const summaryData = {data:[
       tags:['Drag and drop']
     },
     {
-      id: 11,
-      title: "Stateless React Random Fact Generator - no JSX",
-      summary: "Exercise in using React.createElement",
-      demo:'https://codepen.io/stw/pen/PKrWQg',
-      tags:['React','JSX','Functional Component']
+      id: 2,
+      title: "Mock-up Conversion",
+      summary: "Demonstrates ability to take static design files and convert to code",
+      demo:'http://btmbtm.github.io/MD-Encyclopedia-Profiles/',
+      tags:['UI','HTML','CSS','Mock-up']
     },
     {
       id: 12,
@@ -92,13 +99,7 @@ const summaryData = {data:[
       demo:'https://codepen.io/stw/pen/dWzZBL',
       tags:['Events','Partial Page Updates', 'static']
     },
-    {
-      id: 13,
-      title: "CSS Accordion",
-      summary: "Exercise in creating an accordion that only uses HTML / CSS",
-      demo:'https://codepen.io/stw/pen/GNoVqV',
-      tags:['CSS','UI']
-    }
+   
   ]}
 
   //TODO add wordpress demo, lyricsFish?
