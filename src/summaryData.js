@@ -1,7 +1,14 @@
 import { yieldExpression } from "@babel/types";
-
+//add bash scripting projects
 const summaryData = {data:[
-    {
+  {
+    id: 16,
+    title: "Open-source Contributions",
+    summary: "List of open-source contributions",
+    demo:'https://codepen.io/stw/pen/xxKPpmY',
+    tags:['Open-source','documentation','gulp','sass','scss']
+  },
+  {
       id: 0,
       title: "This site",
       summary: "Written in React, uses Elasticlunr.js for search",
@@ -99,6 +106,22 @@ const summaryData = {data:[
       demo:'https://codepen.io/stw/pen/dWzZBL',
       tags:['Events','Partial Page Updates', 'static']
     },
+    {
+      id: 14,
+      title: "Cross-browser Vanilla JavaScript Form w/Validation",
+      summary: "Without modifying the HTML, manipulate a form to include validation and mock a JSON request. No 3rd party libraries or bleeding edge features allowed. Focus is on JS not on CSS. I used the revealing module pattern to create a public interface for the app",
+      repository:'https://bitbucket.org/strtw/dom_only_form_validation/src/master/',
+      demo:'http://dom-form.surge.sh/',
+      tags:['DOM','Partial Page Updates', 'JSON','Document Fragment','Module']
+    },
+    {
+      id: 15,
+      title: "Student Site (2017)",
+      summary: "My responsive portfolio site completed in 2017. Designed and built w/out templates or boilerplate. BEM-like CSS naming convention, Gulp for build, SASS/SCSS",
+      repository:'https://github.com/strtw/personal_site',
+      demo:'http://stuwood.surge.sh/dest/html/index.html',
+      tags:['DOM','BEM','gulp','sass','scss']
+    }
    
   ]}
 
