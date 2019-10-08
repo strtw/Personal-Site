@@ -106,30 +106,31 @@ matchSearchToIndex = (results) =>{
 
     return (
       <div className="App">
-        <header>
-          <h1 className='main-title'>Stu Wood</h1>
-        </header>
+        <div className="cover">
+            <header>
+              <h1 className='main-title'>Stuart Wood</h1>
+              <h2>Front-end Engineer</h2>
+              <h4><a href="mailto:hello@stu-wood.com">hello@stu-wood.com</a></h4>
+            </header>
+        </div>
         <div className="about">
-          <p>Hi, I'm Stu. I'm a San Diego, CA based front-end engineer who as been developing professionally for 3+ years. Competencies include responsive user interfaces, data intensive applications, data visualizations, and Vanilla JS tracking snippets</p>
-         
-          <p>I value code-as-communication and strive to write well-documented, maintainable code. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knoweldge.</p>
-          <p>I love being a developer because I have the priviledge of spending my working hours creatively solving problems, learning, and engaging with really smart people</p>
-         
-          <p>In my free time I enjoy surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
+          <h1>About</h1>
+              <p>I'm a San Diego, CA based front-end engineer who has been designing/developing professionally for 3+ years. I have 7+ years experience in Digital Analytics and Marketing Tech in various roles including sales, marketing, and client services. Current competencies include responsive user interface components, data intensive applications, data visualization, and Vanilla JS tracking snippets. I value code-as-communication and strive to write well-documented, maintainable programs. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knowledge.</p>
+              <p>I love being a developer because I have the privilege of spending my working hours creatively solving problems, learning, and engaging with really smart people. </p>
+              <p>In my free time I enjoy surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
         </div>
       {/*  <Button variant="contained" color="primary">
         Hello World
       </Button>*/}
      {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
-      
-      <h2>Work Samples</h2>
-      <p>Below are some featured projects, with the option to search a larger catalog of samples</p>
-      <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>
-      <div className="project_container">
-          {summaryComponents} 
-      </div>
-      
-    
+        <div class='projects'>
+          <h1>Work Samples</h1>
+          <p>Below are some featured projects, with the option to search a larger catalog of samples</p>
+          <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>
+          <div className="project_container">
+              {summaryComponents} 
+          </div>
+        </div>
       </div>
     );
   }
