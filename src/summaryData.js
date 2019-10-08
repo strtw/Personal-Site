@@ -11,7 +11,7 @@ const summaryData = {data:[
   },
   {
       id: 0,
-      title: "(React) This site",
+      title: "This Portfolio | React",
       summary: "Written in React, uses Elasticlunr.js for search",
       repository:'https://bitbucket.org/strtw/portpholio/src/master/',
       tags:['React'],
