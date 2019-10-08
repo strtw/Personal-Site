@@ -9,6 +9,12 @@ import CodePenCard from './components/CodePenCard.js';
 import TextSummary from './components/TextSummary.js';
 import Searchbar from './components/SearchBar.js';
 import { tsIndexSignature, exportDefaultSpecifier } from '@babel/types';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faEnvelope)
 
 
 const data = {
@@ -107,18 +113,30 @@ matchSearchToIndex = (results) =>{
     return (
       <div className="App">
         <div className="cover">
+        <div class="social-icons">
+          <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
+          <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>
+          <span className='icon'><a href="https://www.linkedin.com/in/stu-wood/" target="blank"><FontAwesomeIcon icon={['fab','linkedin']} size="2x" color="white"></FontAwesomeIcon></a></span>
+          <span className='icon'><a href="https://twitter.com/Stuart_Wood" target="blank"><FontAwesomeIcon icon={['fab','twitter']}size="2x" color="white"></FontAwesomeIcon></a></span>
+        </div>
             <header>
               <h1 className='main-title'>Stuart Wood</h1>
               <h2>Front-end Engineer</h2>
-              <h4><a href="mailto:hello@stu-wood.com">hello@stu-wood.com</a></h4>
+              <div className="profile-pic-container">
+                 <img className="profile-pic" src={require('./images/stu-profile.png')}></img>
+              </div>
+             
             </header>
         </div>
         <div className="about">
           <h1>About</h1>
+         
               <p>I'm a San Diego, CA based front-end engineer who has been designing/developing professionally for 3+ years. I have 7+ years experience in Digital Analytics and Marketing Tech in various roles including sales, marketing, and client services. Current competencies include responsive user interface components, data intensive applications, data visualization, and Vanilla JS tracking snippets. I value code-as-communication and strive to write well-documented, maintainable programs. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knowledge.</p>
               <p>I love being a developer because I have the privilege of spending my working hours creatively solving problems, learning, and engaging with really smart people. </p>
               <p>In my free time I enjoy surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
         </div>
+       
+
       {/*  <Button variant="contained" color="primary">
         Hello World
       </Button>*/}

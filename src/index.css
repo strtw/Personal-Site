@@ -20,13 +20,21 @@ body {
 
 header{
   position: relative;
-  top: 26%;
+  top: 31%;
   font-size: 1.6em;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.social-icons{
+  position:absolute;
+  top:20px;
+  right:10px;
+}
+.icon{
+  margin:5px;
 }
 
 .main-title,h6{
@@ -127,10 +135,28 @@ header a {
   height:500px;
 }
 
+.profile-pic-container{
+  border-radius:50%;
+  height:200px;
+  width:200px;
+  overflow:hidden;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.profile-pic{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  top:-10px;
+}
 
 @media only screen and (max-width: 800px){
   .project{
     width:35%;
+    
   }
   .search-bar{
     width:60%;
@@ -140,6 +166,12 @@ header a {
 @media only screen and (max-width: 600px){
   .project{
     width:100%;
+  }
+  header{
+    top:11%;
+  }
+  .cover{
+    height:600px;
   }
  
 }
