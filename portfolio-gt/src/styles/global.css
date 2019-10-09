@@ -1,0 +1,177 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:#f1f3f6
+ /* background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,0.7987570028011204) 0%, rgba(0,212,255,1) 90%, rgba(48,201,232,1) 100%);
+  */
+}
+
+header{
+  position: relative;
+  top: 31%;
+  font-size: 1.6em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.social-icons{
+  position:absolute;
+  top:20px;
+  right:10px;
+}
+.icon{
+  margin:5px;
+}
+
+.main-title,h6{
+  font-size:3em;
+  color:#ffffff;
+  -webkit-text-stroke: 1px black;
+  margin:10px;
+}
+
+header h2{
+  color:#ffffff;
+}
+
+.cover p {
+  color:#ffffff;
+  font-size:1.2em;
+  -webkit-text-stroke: 1px black;
+}
+
+.main-title{
+  margin:0px;
+  text-transform: uppercase;
+}
+
+.about{
+  text-align:left;
+  width:70%;
+  margin:50px auto;
+  font-size:1.2em;
+  font-weight:100;
+}
+
+.projects{
+  background-color:#102230;
+  color:#F1F3F6;
+  padding-top:50px;
+}
+.project_container{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+  flex-direction:row;
+  
+}
+
+.project{
+  background-color:#F1F3F6;
+  /*border: 2px solid #3b4a4d;*/
+  border-radius: 10px;
+  margin: 20px;
+  padding:15px;
+  width:20%;
+  color:#3b4a4d;
+  -webkit-box-shadow: 1px 2px 19px -4px rgba(74,74,74,1);
+  -moz-box-shadow: 1px 2px 19px -4px rgba(74,74,74,1);
+  box-shadow: 1px 2px 19px -4px rgba(74,74,74,1);
+}
+
+.project_github, .project_demo{
+  margin:10px;
+}
+
+.project_tags{
+  margin:10px;
+}
+
+header a {
+  text-decoration: none;
+  color:#ffffff;
+}
+
+.search{
+  margin:40px;
+}
+.search-button{
+  display:inline-block;
+  margin:5px;
+  border:1px solid gray;
+  border-radius:3px;
+  padding: 2px;
+  color:white;
+  background-color:#ff4431;
+  padding:8px;
+  width:100px;
+}
+
+.search-bar{
+  height:30px;
+  width:20%;
+}
+
+.cover{
+  background-image: url('../images/sunset-cliffs-d2.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  height:500px;
+}
+
+.profile-pic-container{
+  border-radius:50%;
+  height:200px;
+  width:200px;
+  overflow:hidden;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.profile-pic{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  top:-10px;
+}
+
+@media only screen and (max-width: 800px){
+  .project{
+    width:35%;
+    
+  }
+  .search-bar{
+    width:60%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .project{
+    width:100%;
+  }
+  header{
+    top:11%;
+  }
+  .cover{
+    height:600px;
+  }
+ 
+}
