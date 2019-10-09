@@ -9,7 +9,6 @@ import React, {Component} from 'react';
 import '../styles/global.css';
 import '../components/CodePenCard.js';
 import summaryData from '../summaryData'
-import Button from '@material-ui/core/Button';
 import CodePenCard from '../components/CodePenCard.js';
 import TextSummary from '../components/TextSummary.js';
 import Searchbar from '../components/SearchBar.js';
@@ -118,7 +117,7 @@ matchSearchToIndex = (results) =>{
     return (
       <div className="App">
         <div className="cover">
-        <div class="social-icons">
+        <div className="social-icons">
           <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://www.linkedin.com/in/stu-wood/" target="blank"><FontAwesomeIcon icon={['fab','linkedin']} size="2x" color="white"></FontAwesomeIcon></a></span>
@@ -146,7 +145,7 @@ matchSearchToIndex = (results) =>{
         Hello World
       </Button>*/}
      {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
-        <div class='projects'>
+        <div className='projects'>
           <h1>Work Samples</h1>
           <p>Below are some featured projects, with the option to search a larger catalog of samples</p>
           <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>
