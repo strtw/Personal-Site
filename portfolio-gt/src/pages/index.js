@@ -52,16 +52,16 @@ searchResultsObj = (index,query) => {
 
 
 loadProjectToSearchIndex = (data) =>{
-  var index = window.elasticlunr(function () {
-    this.addField('title');
-    this.addField('summary');
-    this.addField('tags');
-    this.setRef('id');
-  });
-  data.forEach(function(project){
-    index.addDoc(project)
-  })
-  return index;
+    var index = window.elasticlunr(function () {
+      this.addField('title');
+      this.addField('summary');
+      this.addField('tags');
+      this.setRef('id');
+    });
+    data.forEach(function(project){
+      index.addDoc(project)
+    })
+    return index;
 }
 
 matchSearchToIndex = (results) =>{
@@ -78,11 +78,14 @@ matchSearchToIndex = (results) =>{
 
 
   updateApp = ()=>{
-    let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
-    let searchResults = this.searchResultsObj(searchIndex, this.state.searchQuery);
-    let matchedProjectIDS = this.matchSearchToIndex(searchResults,this.state.summaryData.data);
-   
-     return matchedProjectIDS;
+    if (typeof window !== `undefined`) {
+      let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
+      let searchResults = this.searchResultsObj(searchIndex, this.state.searchQuery);
+      let matchedProjectIDS = this.matchSearchToIndex(searchResults,this.state.summaryData.data);
+     
+       return matchedProjectIDS;
+    }
+  
     }
 
 
@@ -91,7 +94,7 @@ matchSearchToIndex = (results) =>{
     let projectMatch = false;
     let matchedProjectIDS = this.updateApp();
     let summaryComponents = this.state.summaryData.data.map(project=> {
-    if(this.state.searchQuery !== ""){
+    if(this.state.searchQuery !== "" && matchedProjectIDS){
       for(let id of matchedProjectIDS){
         if(id == project.id){
           projectMatch = true;
