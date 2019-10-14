@@ -138,9 +138,9 @@ matchSearchToIndex = (results) =>{
         <div className="about">
           <h1>About</h1>
          
-              <p>I'm a San Diego, CA based front-end engineer who has been designing/developing professionally for 3+ years. I have 7+ years experience in Digital Analytics and Marketing Tech in various roles including sales, marketing, and client services. Current competencies include responsive user interface components, data intensive applications, data visualization, and Vanilla JS tracking snippets. I value code-as-communication and strive to write well-documented, maintainable programs. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knowledge.</p>
+              <p>I'm a San Diego, CA based front-end engineer who has been designing/developing professionally for 3+ years. I have 7+ years experience in Digital Analytics and Marketing Tech in various roles including sales, marketing, and client services. I have an entrerenurial spirit, am an excellent communicator, and am self-motivated.  I have experience working with remote and colocated teams at start-ups, SMB's, and enterprises. Current competencies include responsive user interface components, data intensive applications, data visualization, and Vanilla JS tracking snippets. I value code-as-communication and strive to write well-documented, maintainable programs. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knowledge.</p>
               <p>I love being a developer because I have the privilege of spending my working hours creatively solving problems, learning, and engaging with really smart people. </p>
-              <p>In my free time I enjoy surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
+              <p><a href="https://photos.app.goo.gl/xYUR2Q1pQcVMKPYH8" target="blank">In my free time</a> I enjoy international travel, surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
         </div>
        
 

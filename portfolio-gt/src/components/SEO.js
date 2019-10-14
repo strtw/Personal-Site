@@ -1,4 +1,4 @@
-import React from "react"
+/*import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
@@ -12,9 +12,9 @@ SEO.propTypes = {
   article: PropTypes.bool,
 }
 SEO.defaultProps = {
-  title: null,
-  description: null,
+  title: "Stu Wood - Front-end Developer",
+  description: "San Diego, CA based front-end JavaScript engineer. Analytics | Data Viz | User Interface Development | Application Development",
   image: null,
   pathname: null,
   article: false,
-}
+}*/
