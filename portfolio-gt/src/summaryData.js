@@ -13,7 +13,7 @@ const summaryData = {data:[
       id: 0,
       title: "This Portfolio | React",
       summary: "Written in React, uses Elasticlunr.js for search. Built with Gatsby, deployed with Netlify",
-      repository:'https://bitbucket.org/strtw/portpholio/src/master/',
+      repository:'https://bitbucket.org/strtw/portpholio/src/gatsby/portfolio-gt/',
       tags:['React'],
       featured:true
     },
