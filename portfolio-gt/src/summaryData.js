@@ -2,7 +2,7 @@ import { yieldExpression } from "@babel/types";
 //add bash scripting projects
 const summaryData = {data:[
   {
-    id: 16,
+    id: 19,
     title: "Open-source Contributions",
     summary: "List of open-source contributions",
     demo:'https://codepen.io/stw/pen/xxKPpmY',
@@ -18,7 +18,7 @@ const summaryData = {data:[
       featured:true
     },
     {
-      id: 1,
+      id: 18,
       title: "React Kanban",
       summary: "Written in React, features drag / drop behavior data persistence via localStorage",
       demo:'http://kanban-react.surge.sh',
@@ -27,7 +27,7 @@ const summaryData = {data:[
       featured:true
     },
     {
-      id: 1,
+      id: 16,
       title: "React Incident Dashboard",
       summary: "Written in React, features responsive design. Dashboard provides users way to filter data in a table by clicking UI cards",
       demo:'http://incidents.surge.sh/',
@@ -36,7 +36,7 @@ const summaryData = {data:[
       featured:true
     },
     {
-      id: 1,
+      id: 17,
       title: "React Covid-19 Hackathon Project",
       summary: "Written in React + Gatsby, Netflify, Firebase. Proof of concept attempt",
       repository:'https://github.com/marcoscannabrava/free-covid-consultation-calendar/',
