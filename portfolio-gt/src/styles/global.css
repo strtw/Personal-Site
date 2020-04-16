@@ -18,6 +18,10 @@ body {
   */
 }
 
+#___gatsby{
+  text-align:center;
+}
+
 header{
   position: relative;
   top: 31%;

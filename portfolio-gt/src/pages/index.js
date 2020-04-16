@@ -9,7 +9,6 @@ import React, {Component} from 'react';
 import '../styles/global.css';
 import '../components/CodePenCard.js';
 import summaryData from '../summaryData'
-import Button from '@material-ui/core/Button';
 import CodePenCard from '../components/CodePenCard.js';
 import TextSummary from '../components/TextSummary.js';
 import Searchbar from '../components/SearchBar.js';
@@ -18,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+//import SEO from "../components/seo";
 
 library.add(fab, faEnvelope)
 
@@ -53,16 +53,16 @@ searchResultsObj = (index,query) => {
 
 
 loadProjectToSearchIndex = (data) =>{
-  var index = window.elasticlunr(function () {
-    this.addField('title');
-    this.addField('summary');
-    this.addField('tags');
-    this.setRef('id');
-  });
-  data.forEach(function(project){
-    index.addDoc(project)
-  })
-  return index;
+    var index = window.elasticlunr(function () {
+      this.addField('title');
+      this.addField('summary');
+      this.addField('tags');
+      this.setRef('id');
+    });
+    data.forEach(function(project){
+      index.addDoc(project)
+    })
+    return index;
 }
 
 matchSearchToIndex = (results) =>{
@@ -79,11 +79,14 @@ matchSearchToIndex = (results) =>{
 
 
   updateApp = ()=>{
-    let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
-    let searchResults = this.searchResultsObj(searchIndex, this.state.searchQuery);
-    let matchedProjectIDS = this.matchSearchToIndex(searchResults,this.state.summaryData.data);
-   
-     return matchedProjectIDS;
+    if (typeof window !== `undefined`) {
+      let searchIndex = this.loadProjectToSearchIndex(summaryData.data);
+      let searchResults = this.searchResultsObj(searchIndex, this.state.searchQuery);
+      let matchedProjectIDS = this.matchSearchToIndex(searchResults,this.state.summaryData.data);
+     
+       return matchedProjectIDS;
+    }
+  
     }
 
 
@@ -92,7 +95,7 @@ matchSearchToIndex = (results) =>{
     let projectMatch = false;
     let matchedProjectIDS = this.updateApp();
     let summaryComponents = this.state.summaryData.data.map(project=> {
-    if(this.state.searchQuery !== ""){
+    if(this.state.searchQuery !== "" && matchedProjectIDS){
       for(let id of matchedProjectIDS){
         if(id == project.id){
           projectMatch = true;
@@ -116,9 +119,10 @@ matchSearchToIndex = (results) =>{
     
 
     return (
+      /*<SEO></SEO>*/
       <div className="App">
         <div className="cover">
-        <div class="social-icons">
+        <div className="social-icons">
           <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://www.linkedin.com/in/stu-wood/" target="blank"><FontAwesomeIcon icon={['fab','linkedin']} size="2x" color="white"></FontAwesomeIcon></a></span>
@@ -135,10 +139,10 @@ matchSearchToIndex = (results) =>{
         </div>
         <div className="about">
           <h1>About</h1>
-         
               <p>I'm a San Diego, CA based front-end engineer who has been designing/developing professionally for 3+ years. I have 7+ years experience in Digital Analytics and Marketing Tech in various roles including implementation, marketing, client services, and business development. Current competencies include responsive user interface components, data intensive applications, data visualization, and Vanilla JS tracking snippets. I value code-as-communication and strive to write well-documented, maintainable programs. I enjoy learning deeply and broadly, and strive to be 'T-shaped' in my knowledge.</p>
+
               <p>I love being a developer because I have the privilege of spending my working hours creatively solving problems, learning, and engaging with really smart people. </p>
-              <p>In my free time I enjoy surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
+              <p><a href="https://photos.app.goo.gl/xYUR2Q1pQcVMKPYH8" target="blank">In my free time</a> I enjoy international travel, surfing, gardening, cooking, and trying out new restaurants/breweries. I also dabble in performing at open mics.</p>
         </div>
        
 
@@ -146,7 +150,7 @@ matchSearchToIndex = (results) =>{
         Hello World
       </Button>*/}
      {/*} <CodePenCard height={data.height} width={data.width} title={data.titles} src={data.penUrl}/>*/}
-        <div class='projects'>
+        <div className='projects'>
           <h1>Work Samples</h1>
           <p>Below are some featured projects, with the option to search a larger catalog of samples</p>
           <Searchbar getSearchQuery={this.getSearchQueryP}></Searchbar>

@@ -12,9 +12,36 @@ const summaryData = {data:[
   {
       id: 0,
       title: "This Portfolio | React",
-      summary: "Written in React, uses Elasticlunr.js for search",
-      repository:'https://bitbucket.org/strtw/portpholio/src/master/',
-      tags:['React'],
+      summary: "Written in React, uses Elasticlunr.js for search. Built with Gatsby, deployed with Netlify",
+      repository:'https://bitbucket.org/strtw/portpholio/src/gatsby/portfolio-gt/',
+      tags:['React','Search'],
+      featured:true
+    },
+    {
+      id: 1,
+      title: "React Kanban",
+      summary: "Written in React, features drag / drop behavior data persistence via localStorage",
+      demo:'http://kanban-react.surge.sh',
+      repository:'https://github.com/strtw/kanban',
+      tags:['React','drag and drop','UI'],
+      featured:true
+    },
+    {
+      id: 1,
+      title: "React Incident Dashboard",
+      summary: "Written in React, features responsive design. Dashboard provides users way to filter data in a table by clicking UI cards",
+      demo:'http://incidents.surge.sh/',
+      repository:'github.com/strtw/incident-dashboard/',
+      tags:['React','Responsive','UI'],
+      featured:true
+    },
+    {
+      id: 1,
+      title: "React Covid-19 Hackathon Project",
+      summary: "Written in React + Gatsby, Netflify, Firebase. Proof of concept attempt",
+      repository:'https://github.com/marcoscannabrava/free-covid-consultation-calendar/',
+      presentation:'https://devpost.com/software/careconsult-xbvp3u',
+      tags:['React','Gatsby'],
       featured:true
     },
     {

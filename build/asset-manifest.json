@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5c9e03a8.chunk.css",
+    "main.js": "/static/js/main.7bbb907d.chunk.js",
+    "main.js.map": "/static/js/main.7bbb907d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.603a9bf8.chunk.js": "/static/js/2.603a9bf8.chunk.js",
+    "static/js/2.603a9bf8.chunk.js.map": "/static/js/2.603a9bf8.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.402b34c66a98bed1146a4bef0db22149.js": "/precache-manifest.402b34c66a98bed1146a4bef0db22149.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5c9e03a8.chunk.css.map": "/static/css/main.5c9e03a8.chunk.css.map",
+    "static/media/stu-profile.png": "/static/media/stu-profile.ba584cd1.png",
+    "static/media/index.css": "/static/media/sunset-cliffs-d2.daa934d5.png"
+  }
+}
