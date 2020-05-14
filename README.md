@@ -7,7 +7,7 @@ and decided that using Gatsby would be a good solution because its server render
 [Site](http://stu-wood.com)
 
 ## Running the project locally
-`git checkout gatsby`
+`git checkout master` 
 
 `cd portfolio-gt`
 
