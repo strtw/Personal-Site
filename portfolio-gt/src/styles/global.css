@@ -123,11 +123,13 @@ header a {
   background-color:#ff4431;
   padding:8px;
   width:100px;
+  cursor: pointer;
 }
 
 .search-bar{
   height:30px;
   width:20%;
+  
 }
 
 .cover{
