@@ -1,4 +1,4 @@
-# Personal-Site
+# stu-wood.com
 I initially built my site using React.js with create-react-app, to better familiarize myself with React.
 I decided that I wanted to implement a search feature to search my various projects and settled on using [ElasticLunr](http://elasticlunr.com/).
 After deciding that I'd like to perhaps make a blog on the site at some point, I researched SEO considerations for React
