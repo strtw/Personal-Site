@@ -4,9 +4,6 @@ I decided that I wanted to implement a search feature to search my various proje
 After deciding that I'd like to perhaps make a blog on the site at some point, I researched SEO considerations for React
 and decided that using Gatsby would be a good solution because its server rendered pages are available to search bots. 
 
-
-[Repository](https://bitbucket.org/strtw/portpholio/src/gatsby/portfolio-gt/)
-
 [Site](http://stu-wood.com)
 
 ## Running the project locally
