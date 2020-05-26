@@ -38,6 +38,7 @@ code {
   position:absolute;
   top:20px;
   right:10px;
+  z-index: 1;
 }
 .icon{
   margin:5px;
