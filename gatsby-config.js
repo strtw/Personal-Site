@@ -10,7 +10,7 @@ module.exports = {
     options: {
       path: `${__dirname}/src/images/`,
     },
-  }, `gatsby-transformer-sharp`],
+  }, `gatsby-transformer-sharp`,`gatsby-plugin-styled-components`],
   siteMetadata: {
     title: "Stu Wood - Front-end Developer",
     description:
