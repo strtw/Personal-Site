@@ -5,7 +5,12 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-postcss`],
+  plugins: [`gatsby-plugin-postcss`,`gatsby-plugin-sharp`, {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/src/images/`,
+    },
+  }, `gatsby-transformer-sharp`],
   siteMetadata: {
     title: "Stu Wood - Front-end Developer",
     description:

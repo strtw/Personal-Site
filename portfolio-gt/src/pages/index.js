@@ -10,6 +10,7 @@ import '../styles/global.css';
 import '../components/CodePenCard.js';
 import summaryData from '../summaryData'
 import CodePenCard from '../components/CodePenCard.js';
+import { graphql } from "gatsby"
 import TextSummary from '../components/TextSummary.js';
 import Searchbar from '../components/SearchBar.js';
 import { tsIndexSignature, exportDefaultSpecifier } from '@babel/types';
@@ -17,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import StyledBackgroundSection from '../components/BackGroundImage'
 //import SEO from "../components/seo";
 
 library.add(fab, faEnvelope)
@@ -123,6 +125,7 @@ matchSearchToIndex = (results) =>{
       /*<SEO></SEO>*/
       <div className="App">
         <div className="cover">
+        <StyledBackgroundSection/>
         <div className="social-icons">
           <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>
