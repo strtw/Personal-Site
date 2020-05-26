@@ -27,7 +27,6 @@ export default function HTML(props) {
            __html: elasticLunr,
           }}/>
           <link rel="shortcut icon" href="https://www.stu-wood.com/favicon.ico?v=1"/>
-          <script id="parsely-cfg" src="//cdn.parsely.com/keys/stu-wood.com/p.js"></script> 
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

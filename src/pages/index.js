@@ -5,6 +5,8 @@
 
 
 import React, {Component} from 'react';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from "@fortawesome/fontawesome-svg-core";
 //import logo from './logo.svg';
 import '../styles/global.css';
 import '../components/CodePenCard.js';
@@ -20,6 +22,9 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import StyledBackgroundSection from '../components/BackGroundImage'
 //import SEO from "../components/seo";
+
+// Prevent fontawesome from dynamically adding its css since we did it manually above
+config.autoAddCss = false;
 
 library.add(fab, faEnvelope)
 
