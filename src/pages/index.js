@@ -124,13 +124,13 @@ matchSearchToIndex = (results) =>{
     return (
       /*<SEO></SEO>*/
       <div className="App">
-        <div className="cover">
-        <div className="social-icons">
+         <div className="social-icons">
           <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://www.linkedin.com/in/stu-wood/" target="blank"><FontAwesomeIcon icon={['fab','linkedin']} size="2x" color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://twitter.com/Stuart_Wood" target="blank"><FontAwesomeIcon icon={['fab','twitter']}size="2x" color="white"></FontAwesomeIcon></a></span>
         </div>
+        <div className="cover">
         <StyledBackgroundSection/>
             <header>
               <h1 className='main-title'>Stuart Wood</h1>
