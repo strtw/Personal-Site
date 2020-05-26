@@ -9,8 +9,6 @@ and decided that using Gatsby would be a good solution because its server render
 ## Running the project locally
 `git checkout master` 
 
-`cd portfolio-gt`
-
 `npm install`
 
 `gatsby develop`
