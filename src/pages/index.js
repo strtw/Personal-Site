@@ -21,7 +21,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import StyledBackgroundSection from '../components/BackGroundImage'
-//import SEO from "../components/seo";
+import SEO from "../components/seo";
 
 // Prevent fontawesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false;
@@ -127,8 +127,8 @@ matchSearchToIndex = (results) =>{
     
 
     return (
-      /*<SEO></SEO>*/
       <div className="App">
+        <SEO></SEO>
          <div className="social-icons">
           <span className='icon'><a href="mailto:hello@stu-wood.com"><FontAwesomeIcon icon="envelope" size='2x' color="white"></FontAwesomeIcon></a></span>
           <span className='icon'><a href="https://github.com/strtw" target="blank"><FontAwesomeIcon icon={['fab','github']} size="2x" color="white"></FontAwesomeIcon></a></span>

@@ -7,13 +7,6 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <meta property="og:title" content="Stuart Wood - Front-end Developer"/>
-        <meta property="og:site_name" content="Stuart Wood - Front-end Developer"/>
-        <meta property="og:url" content="https://www.stu-wood.com"/>
-        <meta property="og:description" content="San Diego, CA based front-end JavaScript engineer. Analytics | Data Viz | User Interface Development | Application Development"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="https://www.stu-wood.com/images/preview-image.png"/> 
-        <meta property="twitter:image" content="https://www.stu-wood.com/images/preview-image.png"/> 
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta

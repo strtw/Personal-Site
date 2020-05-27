@@ -12,9 +12,9 @@ module.exports = {
     },
   }, `gatsby-transformer-sharp`,`gatsby-plugin-styled-components`],
   siteMetadata: {
-    title: "Stu Wood - Front-end Developer",
+    title: "Stu Wood - Front-end Engineer | San Diego, CA",
     description:
-      "San Diego, CA based front-end JavaScript engineer. Analytics | Data Viz | User Interface Development | Application Development | React",
+      "I design and build modern web applications using React.js, and am an experienced marketing & digital analytics developer",
     url: "https://www.stu-wood.com", // No trailing slash allowed!
     image: "/preview-image.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@stuart_wood",
